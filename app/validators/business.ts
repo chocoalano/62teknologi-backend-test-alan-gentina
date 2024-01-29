@@ -42,7 +42,6 @@ export const businessCreateValidator = vine.compile(
         }),
         photos: vine.array(
             vine.object({
-                url: vine.string(),
                 caption: vine.string(),
                 width: vine.number(),
                 height: vine.number(),
