@@ -1480,7 +1480,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/business/categories?alias={{$randomFirstName}}&title={{$randomFirstName}}",
+									"raw": "{{base_url}}/business/categories?alias=Oceane&title=Gideon",
 									"host": [
 										"{{base_url}}"
 									],
@@ -1491,11 +1491,11 @@
 									"query": [
 										{
 											"key": "alias",
-											"value": "{{$randomFirstName}}"
+											"value": "Marco"
 										},
 										{
 											"key": "title",
-											"value": "{{$randomFirstName}}"
+											"value": "Eunice"
 										}
 									]
 								}
@@ -1595,7 +1595,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/business/categories/21?alias={{$randomFirstName}}&title={{$randomFirstName}}",
+									"raw": "{{base_url}}/business/categories/21?alias=Cedrick&title=Lucinda",
 									"host": [
 										"{{base_url}}"
 									],
@@ -1607,11 +1607,11 @@
 									"query": [
 										{
 											"key": "alias",
-											"value": "{{$randomFirstName}}"
+											"value": "Larue"
 										},
 										{
 											"key": "title",
-											"value": "{{$randomFirstName}}"
+											"value": "Olen"
 										}
 									]
 								}
@@ -2042,7 +2042,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/business/open?is_overnight={{$randomBoolean}}&start=100&end=100&day=100",
+									"raw": "{{base_url}}/business/open?is_overnight=true&start=100&end=100&day=100",
 									"host": [
 										"{{base_url}}"
 									],
@@ -2053,7 +2053,7 @@
 									"query": [
 										{
 											"key": "is_overnight",
-											"value": "{{$randomBoolean}}"
+											"value": "false"
 										},
 										{
 											"key": "start",
@@ -2173,7 +2173,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/business/open/21?is_overnight={{$randomBoolean}}&start=100&end=100&day=100",
+									"raw": "{{base_url}}/business/open/21?is_overnight=true&start=100&end=100&day=100",
 									"host": [
 										"{{base_url}}"
 									],
@@ -2185,7 +2185,7 @@
 									"query": [
 										{
 											"key": "is_overnight",
-											"value": "{{$randomBoolean}}"
+											"value": "true"
 										},
 										{
 											"key": "start",
@@ -2238,6 +2238,1326 @@
 				}
 			],
 			"id": "f204d8fb-ac7a-4d8c-ae49-31a8aa117954"
+		},
+		{
+			"name": "BUSINESS",
+			"item": [
+				{
+					"name": "LIST",
+					"id": "503b1ca9-42c7-4e55-b7a7-bade69ab1e0d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tokenAuth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/business/list?page=1&limit=10&sortDesc=&sortBy=id&search=",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"business",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "sortDesc",
+									"value": ""
+								},
+								{
+									"key": "sortBy",
+									"value": "id"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "30ca34d2-75e3-451c-a6d4-62c67d0f122c",
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/business/list?page=1&limit=10&sortDesc=&sortBy=id&search=",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"business",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "sortDesc",
+											"value": ""
+										},
+										{
+											"key": "sortBy",
+											"value": "id"
+										},
+										{
+											"key": "search",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "set-cookie",
+									"value": "adonis-session=s%3AeyJtZXNzYWdlIjoieW1rMmR3ejFxY2Ixd2JjZzJ4ZnpuYndqIiwicHVycG9zZSI6ImFkb25pcy1zZXNzaW9uIn0.0s7jeQk60IzWja704Wncouyy6qig5TSj43-idjC1yG4; Max-Age=7200; Path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "content-length",
+									"value": "1725"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jan 2024 10:10:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"total\": 1,\n        \"per_page\": 10,\n        \"current_page\": 1,\n        \"last_page\": 1,\n        \"first_page\": 1,\n        \"first_page_url\": \"/?page=1\",\n        \"last_page_url\": \"/?page=1\",\n        \"next_page_url\": null,\n        \"previous_page_url\": null\n    },\n    \"data\": [\n        {\n            \"id\": 3,\n            \"display_phone\": \"+93 60 485 1202\",\n            \"distance\": \"-175.54\",\n            \"image_url\": \"http://localhost:3333/images/q6u7znd6f43sb4erbbpsyi19.png\",\n            \"is_claimed\": 1,\n            \"is_closed\": 1,\n            \"date_opened\": \"2024-01-29\",\n            \"date_closed\": \"2024-01-29\",\n            \"name\": \"Generic Bronze Tuna\",\n            \"phone\": \"+93 04 472 2485\",\n            \"price\": \"$\",\n            \"rating\": 5,\n            \"review_count\": 1,\n            \"transactions\": \"restaurant_reservation\",\n            \"created_at\": \"2024-01-29T08:56:01.000+00:00\",\n            \"updated_at\": \"2024-01-29T08:56:01.000+00:00\",\n            \"attribute\": {\n                \"business_id\": 3,\n                \"business_temp_closed\": 720,\n                \"outdoor_seating\": 1,\n                \"liked_by_vegans\": 1,\n                \"liked_by_vegetarians\": 1,\n                \"hot_and_new\": \"2024-01-29\"\n            },\n            \"kordinat\": {\n                \"business_id\": 3,\n                \"latitude\": \"80.10\",\n                \"longitude\": \"38.19\"\n            },\n            \"lokasi\": {\n                \"business_id\": 3,\n                \"address_1\": \"133 Blick Passage Suite 722\",\n                \"address_2\": \"4309 Adriana Junctions Apt. 094\",\n                \"address_3\": \"7027 Cornell Radial Apt. 905\",\n                \"city\": \"Elkhart\",\n                \"country\": \"Bangladesh\",\n                \"state\": \"Maryland\",\n                \"zip_code\": \"02428\"\n            },\n            \"photo\": [\n                {\n                    \"photo_id\": 7,\n                    \"business_id\": 3,\n                    \"url\": \"http://localhost:3333/images/ly4wvzkohvrbqqva1hou78eq.png\",\n                    \"caption\": \"alias expedita earum debitis\",\n                    \"width\": 840,\n                    \"height\": 574,\n                    \"is_user_submitted\": 1,\n                    \"user_id\": null,\n                    \"label\": \"ly4wvzkohvrbqqva1hou78eq.png\"\n                }\n            ],\n            \"categories_related\": [\n                {\n                    \"id\": 3,\n                    \"business_id\": 3,\n                    \"categories_id\": 1,\n                    \"category\": {\n                        \"id\": 1,\n                        \"alias\": \"demitto sursum utique\",\n                        \"title\": \"tum carmen abscido\",\n                        \"created_at\": \"2024-01-27T10:57:44.000+00:00\",\n                        \"updated_at\": \"2024-01-27T10:57:44.000+00:00\"\n                    }\n                }\n            ],\n            \"open_hour\": [\n                {\n                    \"id\": 14,\n                    \"business_id\": 3,\n                    \"open_id\": 13,\n                    \"hours_type\": \"REGULAR\",\n                    \"is_open_now\": 1,\n                    \"open\": {\n                        \"id\": 13,\n                        \"is_overnight\": 1,\n                        \"start\": 2,\n                        \"end\": 2,\n                        \"day\": 4\n                    }\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "SHOW",
+					"id": "56676971-fe87-4a41-82b1-919a5faffee7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tokenAuth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/business/show/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"business",
+								"show",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "024745d5-2bf4-44ec-b33e-2c8a168925d5",
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/business/show/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"business",
+										"show",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "set-cookie",
+									"value": "adonis-session=s%3AeyJtZXNzYWdlIjoieW1rMmR3ejFxY2Ixd2JjZzJ4ZnpuYndqIiwicHVycG9zZSI6ImFkb25pcy1zZXNzaW9uIn0.0s7jeQk60IzWja704Wncouyy6qig5TSj43-idjC1yG4; Max-Age=7200; Path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "content-length",
+									"value": "1534"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jan 2024 10:11:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"display_phone\": \"+93 60 485 1202\",\n    \"distance\": \"-175.54\",\n    \"image_url\": \"http://localhost:3333/images/q6u7znd6f43sb4erbbpsyi19.png\",\n    \"is_claimed\": 1,\n    \"is_closed\": 1,\n    \"date_opened\": \"2024-01-29\",\n    \"date_closed\": \"2024-01-29\",\n    \"name\": \"Generic Bronze Tuna\",\n    \"phone\": \"+93 04 472 2485\",\n    \"price\": \"$\",\n    \"rating\": 5,\n    \"review_count\": 1,\n    \"transactions\": \"restaurant_reservation\",\n    \"created_at\": \"2024-01-29T08:56:01.000+00:00\",\n    \"updated_at\": \"2024-01-29T08:56:01.000+00:00\",\n    \"attribute\": {\n        \"business_id\": 3,\n        \"business_temp_closed\": 720,\n        \"outdoor_seating\": 1,\n        \"liked_by_vegans\": 1,\n        \"liked_by_vegetarians\": 1,\n        \"hot_and_new\": \"2024-01-29\"\n    },\n    \"kordinat\": {\n        \"business_id\": 3,\n        \"latitude\": \"80.10\",\n        \"longitude\": \"38.19\"\n    },\n    \"lokasi\": {\n        \"business_id\": 3,\n        \"address_1\": \"133 Blick Passage Suite 722\",\n        \"address_2\": \"4309 Adriana Junctions Apt. 094\",\n        \"address_3\": \"7027 Cornell Radial Apt. 905\",\n        \"city\": \"Elkhart\",\n        \"country\": \"Bangladesh\",\n        \"state\": \"Maryland\",\n        \"zip_code\": \"02428\"\n    },\n    \"photo\": [\n        {\n            \"photo_id\": 7,\n            \"business_id\": 3,\n            \"url\": \"http://localhost:3333/images/ly4wvzkohvrbqqva1hou78eq.png\",\n            \"caption\": \"alias expedita earum debitis\",\n            \"width\": 840,\n            \"height\": 574,\n            \"is_user_submitted\": 1,\n            \"user_id\": null,\n            \"label\": \"ly4wvzkohvrbqqva1hou78eq.png\"\n        }\n    ],\n    \"categories_related\": [\n        {\n            \"id\": 3,\n            \"business_id\": 3,\n            \"categories_id\": 1,\n            \"category\": {\n                \"id\": 1,\n                \"alias\": \"demitto sursum utique\",\n                \"title\": \"tum carmen abscido\",\n                \"created_at\": \"2024-01-27T10:57:44.000+00:00\",\n                \"updated_at\": \"2024-01-27T10:57:44.000+00:00\"\n            }\n        }\n    ],\n    \"open_hour\": [\n        {\n            \"id\": 14,\n            \"business_id\": 3,\n            \"open_id\": 13,\n            \"hours_type\": \"REGULAR\",\n            \"is_open_now\": 1,\n            \"open\": {\n                \"id\": 13,\n                \"is_overnight\": 1,\n                \"start\": 2,\n                \"end\": 2,\n                \"day\": 4\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"id": "93227cff-c25c-4dce-9b31-6729b36678b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tokenAuth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/business/delete/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"business",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "6c0337c8-0785-42a6-978c-754dde3032a6",
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/business/delete/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"business",
+										"delete",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "set-cookie",
+									"value": "adonis-session=s%3AeyJtZXNzYWdlIjoieW1rMmR3ejFxY2Ixd2JjZzJ4ZnpuYndqIiwicHVycG9zZSI6ImFkb25pcy1zZXNzaW9uIn0.0s7jeQk60IzWja704Wncouyy6qig5TSj43-idjC1yG4; Max-Age=7200; Path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "content-length",
+									"value": "692"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jan 2024 10:12:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"display_phone\": \"+93 60 485 1202\",\n    \"distance\": \"-175.54\",\n    \"image_url\": \"http://localhost:3333/images/q6u7znd6f43sb4erbbpsyi19.png\",\n    \"is_claimed\": 1,\n    \"is_closed\": 1,\n    \"date_opened\": \"2024-01-29\",\n    \"date_closed\": \"2024-01-29\",\n    \"name\": \"Generic Bronze Tuna\",\n    \"phone\": \"+93 04 472 2485\",\n    \"price\": \"$\",\n    \"rating\": 5,\n    \"review_count\": 1,\n    \"transactions\": \"restaurant_reservation\",\n    \"created_at\": \"2024-01-29T08:56:01.000+00:00\",\n    \"updated_at\": \"2024-01-29T08:56:01.000+00:00\",\n    \"photo\": [\n        {\n            \"photo_id\": 7,\n            \"business_id\": 3,\n            \"url\": \"http://localhost:3333/images/ly4wvzkohvrbqqva1hou78eq.png\",\n            \"caption\": \"alias expedita earum debitis\",\n            \"width\": 840,\n            \"height\": 574,\n            \"is_user_submitted\": 1,\n            \"user_id\": null,\n            \"label\": \"ly4wvzkohvrbqqva1hou78eq.png\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "STORE",
+					"id": "b2dc391e-b188-4fdb-8aa9-5bd8ba586260",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tokenAuth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "display_phone",
+									"value": "{{$randomPhoneNumberExt}}",
+									"type": "text"
+								},
+								{
+									"key": "distance",
+									"value": "{{$randomLatitude}}",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"src": "/C:/Users/alang/Downloads/6596121.png"
+								},
+								{
+									"key": "is_claimed",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "is_closed",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "date_opened",
+									"value": "2000-01-01",
+									"type": "text"
+								},
+								{
+									"key": "date_closed",
+									"value": "2000-01-01",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "{{$randomNatureImage}}",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "{{$randomPhoneNumberExt}}",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "$",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "review_count",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "transactions",
+									"value": "restaurant_reservation",
+									"type": "text"
+								},
+								{
+									"key": "coordinate['latitude']",
+									"value": "{{$randomLatitude}}",
+									"type": "text"
+								},
+								{
+									"key": "coordinate['longitude']",
+									"value": "{{$randomLongitude}}",
+									"type": "text"
+								},
+								{
+									"key": "location['address1']",
+									"value": "{{$randomStreetAddress}}",
+									"type": "text"
+								},
+								{
+									"key": "location['address2']",
+									"value": "{{$randomStreetAddress}}",
+									"type": "text"
+								},
+								{
+									"key": "location['address3']",
+									"value": "{{$randomStreetAddress}}",
+									"type": "text"
+								},
+								{
+									"key": "location['city']",
+									"value": "{{$randomCity}}",
+									"type": "text"
+								},
+								{
+									"key": "location['state']",
+									"value": "{{$randomStreetName}}",
+									"type": "text"
+								},
+								{
+									"key": "location['zip_code']",
+									"value": "{{$randomZipCode}}",
+									"type": "text"
+								},
+								{
+									"key": "location['country']",
+									"value": "{{$randomCountry}}",
+									"type": "text"
+								},
+								{
+									"key": "attribute['business_temp_closed']",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "attribute['outdoor_seating']",
+									"value": "{{$randomBoolean}}",
+									"type": "text"
+								},
+								{
+									"key": "attribute['liked_by_vegans']",
+									"value": "{{$randomBoolean}}",
+									"type": "text"
+								},
+								{
+									"key": "attribute['liked_by_vegetarians']",
+									"value": "{{$randomBoolean}}",
+									"type": "text"
+								},
+								{
+									"key": "attribute['hot_and_new']",
+									"value": "2000-01-01",
+									"type": "text"
+								},
+								{
+									"key": "category[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['url']",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['caption']",
+									"value": "{{$randomLoremWord}}",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['width']",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['height']",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['is_user_submitted']",
+									"value": "{{$randomBoolean}}",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['label']",
+									"value": "{{$randomLoremWord}}",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['image']",
+									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"src": "/C:/Users/alang/Downloads/6596121.png"
+								},
+								{
+									"key": "open_hours[0]['open_id']",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "open_hours[0]['hours_type']",
+									"value": "REGULAR",
+									"type": "text"
+								},
+								{
+									"key": "open_hours[0]['is_open_now']",
+									"value": "{{$randomBoolean}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/business/store",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"business",
+								"store"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "c0e76e5f-4b47-4b50-8149-ba016e864633",
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "display_phone",
+											"value": "{{$randomPhoneNumberExt}}",
+											"type": "text"
+										},
+										{
+											"key": "distance",
+											"value": "{{$randomLatitude}}",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+											"src": [
+												"/C:/Users/alang/Downloads/6596121.png"
+											]
+										},
+										{
+											"key": "is_claimed",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "is_closed",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "date_opened",
+											"value": "2000-01-01",
+											"type": "text"
+										},
+										{
+											"key": "date_closed",
+											"value": "2000-01-01",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "{{$randomNatureImage}}",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "{{$randomPhoneNumberExt}}",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "$",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "review_count",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "transactions",
+											"value": "restaurant_reservation",
+											"type": "text"
+										},
+										{
+											"key": "coordinate['latitude']",
+											"value": "{{$randomLatitude}}",
+											"type": "text"
+										},
+										{
+											"key": "coordinate['longitude']",
+											"value": "{{$randomLongitude}}",
+											"type": "text"
+										},
+										{
+											"key": "location['address1']",
+											"value": "{{$randomStreetAddress}}",
+											"type": "text"
+										},
+										{
+											"key": "location['address2']",
+											"value": "{{$randomStreetAddress}}",
+											"type": "text"
+										},
+										{
+											"key": "location['address3']",
+											"value": "{{$randomStreetAddress}}",
+											"type": "text"
+										},
+										{
+											"key": "location['city']",
+											"value": "{{$randomCity}}",
+											"type": "text"
+										},
+										{
+											"key": "location['state']",
+											"value": "{{$randomStreetName}}",
+											"type": "text"
+										},
+										{
+											"key": "location['zip_code']",
+											"value": "{{$randomZipCode}}",
+											"type": "text"
+										},
+										{
+											"key": "location['country']",
+											"value": "{{$randomCountry}}",
+											"type": "text"
+										},
+										{
+											"key": "attribute['business_temp_closed']",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "attribute['outdoor_seating']",
+											"value": "{{$randomBoolean}}",
+											"type": "text"
+										},
+										{
+											"key": "attribute['liked_by_vegans']",
+											"value": "{{$randomBoolean}}",
+											"type": "text"
+										},
+										{
+											"key": "attribute['liked_by_vegetarians']",
+											"value": "{{$randomBoolean}}",
+											"type": "text"
+										},
+										{
+											"key": "attribute['hot_and_new']",
+											"value": "2000-01-01",
+											"type": "text"
+										},
+										{
+											"key": "category[]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['url']",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['caption']",
+											"value": "{{$randomLoremWord}}",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['width']",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['height']",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['is_user_submitted']",
+											"value": "{{$randomBoolean}}",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['label']",
+											"value": "{{$randomLoremWord}}",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['image']",
+											"type": "file",
+											"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+											"src": [
+												"/C:/Users/alang/Downloads/6596121.png"
+											]
+										},
+										{
+											"key": "open_hours[0]['open_id']",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "open_hours[0]['hours_type']",
+											"value": "REGULAR",
+											"type": "text"
+										},
+										{
+											"key": "open_hours[0]['is_open_now']",
+											"value": "{{$randomBoolean}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/business/store",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"business",
+										"store"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "set-cookie",
+									"value": "adonis-session=s%3AeyJtZXNzYWdlIjoieW1rMmR3ejFxY2Ixd2JjZzJ4ZnpuYndqIiwicHVycG9zZSI6ImFkb25pcy1zZXNzaW9uIn0.0s7jeQk60IzWja704Wncouyy6qig5TSj43-idjC1yG4; Max-Age=7200; Path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "content-length",
+									"value": "994"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jan 2024 11:37:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"display_phone\": \"63-283-219-5431\",\n    \"distance\": -0.9869,\n    \"is_claimed\": true,\n    \"is_closed\": true,\n    \"date_opened\": \"2000-01-01T00:00:00.000Z\",\n    \"date_closed\": \"2000-01-01T00:00:00.000Z\",\n    \"name\": \"http://placeimg.com/640/480/nature\",\n    \"phone\": \"7-287-742-9310\",\n    \"price\": \"$\",\n    \"rating\": 5,\n    \"review_count\": 1,\n    \"transactions\": \"restaurant_reservation\",\n    \"coordinate\": {\n        \"latitude\": -7.8738,\n        \"longitude\": 93.3624\n    },\n    \"location\": {\n        \"address1\": \"89049 Wolff Trail\",\n        \"address2\": \"6632 Gibson Mountain\",\n        \"address3\": \"27452 Rolfson Rapid\",\n        \"city\": \"Antelope\",\n        \"country\": \"New Zealand\",\n        \"state\": \"Waters Hill\",\n        \"zip_code\": \"1234567890\"\n    },\n    \"attribute\": {\n        \"business_temp_closed\": 100,\n        \"outdoor_seating\": true,\n        \"liked_by_vegans\": true,\n        \"liked_by_vegetarians\": false,\n        \"hot_and_new\": \"2000-01-01T00:00:00.000Z\"\n    },\n    \"photos\": [\n        {\n            \"caption\": \"totam\",\n            \"width\": 100,\n            \"height\": 100,\n            \"is_user_submitted\": false,\n            \"label\": \"consequuntur\"\n        }\n    ],\n    \"category\": [\n        1\n    ],\n    \"open_hours\": [\n        {\n            \"open_id\": 1,\n            \"hours_type\": \"REGULAR\",\n            \"is_open_now\": false\n        }\n    ],\n    \"image_url\": \"http://localhost:3333/images/qf1l56kpkacolawf9abiw0dr.png\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE",
+					"id": "5bb67ef0-9c2c-4b0c-aff5-c0fb9e9f07ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{tokenAuth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "display_phone",
+									"value": "{{$randomPhoneNumberExt}}",
+									"type": "text"
+								},
+								{
+									"key": "distance",
+									"value": "{{$randomLatitude}}",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"src": "/C:/Users/alang/Downloads/6596121.png"
+								},
+								{
+									"key": "is_claimed",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "is_closed",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "date_opened",
+									"value": "2000-01-01",
+									"type": "text"
+								},
+								{
+									"key": "date_closed",
+									"value": "2000-01-01",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "{{$randomNatureImage}}",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "{{$randomPhoneNumberExt}}",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "$",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "review_count",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "transactions",
+									"value": "restaurant_reservation",
+									"type": "text"
+								},
+								{
+									"key": "coordinate['latitude']",
+									"value": "{{$randomLatitude}}",
+									"type": "text"
+								},
+								{
+									"key": "coordinate['longitude']",
+									"value": "{{$randomLongitude}}",
+									"type": "text"
+								},
+								{
+									"key": "location['address1']",
+									"value": "{{$randomStreetAddress}}",
+									"type": "text"
+								},
+								{
+									"key": "location['address2']",
+									"value": "{{$randomStreetAddress}}",
+									"type": "text"
+								},
+								{
+									"key": "location['address3']",
+									"value": "{{$randomStreetAddress}}",
+									"type": "text"
+								},
+								{
+									"key": "location['city']",
+									"value": "{{$randomCity}}",
+									"type": "text"
+								},
+								{
+									"key": "location['state']",
+									"value": "{{$randomStreetName}}",
+									"type": "text"
+								},
+								{
+									"key": "location['zip_code']",
+									"value": "{{$randomZipCode}}",
+									"type": "text"
+								},
+								{
+									"key": "location['country']",
+									"value": "{{$randomCountry}}",
+									"type": "text"
+								},
+								{
+									"key": "attribute['business_temp_closed']",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "attribute['outdoor_seating']",
+									"value": "{{$randomBoolean}}",
+									"type": "text"
+								},
+								{
+									"key": "attribute['liked_by_vegans']",
+									"value": "{{$randomBoolean}}",
+									"type": "text"
+								},
+								{
+									"key": "attribute['liked_by_vegetarians']",
+									"value": "{{$randomBoolean}}",
+									"type": "text"
+								},
+								{
+									"key": "attribute['hot_and_new']",
+									"value": "2000-01-01",
+									"type": "text"
+								},
+								{
+									"key": "category[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['url']",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['caption']",
+									"value": "{{$randomLoremWord}}",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['width']",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['height']",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['is_user_submitted']",
+									"value": "{{$randomBoolean}}",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['label']",
+									"value": "{{$randomLoremWord}}",
+									"type": "text"
+								},
+								{
+									"key": "photos[0]['image']",
+									"type": "file",
+									"src": "/C:/Users/alang/Downloads/6596121.png"
+								},
+								{
+									"key": "open_hours[0]['open_id']",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "open_hours[0]['hours_type']",
+									"value": "REGULAR",
+									"type": "text"
+								},
+								{
+									"key": "open_hours[0]['is_open_now']",
+									"value": "{{$randomBoolean}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/business/update/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"business",
+								"update",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "43b44cbb-aa6f-4fdf-a5ca-7facb2fda9e0",
+							"name": "200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "display_phone",
+											"value": "{{$randomPhoneNumberExt}}",
+											"type": "text"
+										},
+										{
+											"key": "distance",
+											"value": "{{$randomLatitude}}",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+											"src": [
+												"/C:/Users/alang/Downloads/6596121.png"
+											]
+										},
+										{
+											"key": "is_claimed",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "is_closed",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "date_opened",
+											"value": "2000-01-01",
+											"type": "text"
+										},
+										{
+											"key": "date_closed",
+											"value": "2000-01-01",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "{{$randomNatureImage}}",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "{{$randomPhoneNumberExt}}",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "$",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "review_count",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "transactions",
+											"value": "restaurant_reservation",
+											"type": "text"
+										},
+										{
+											"key": "coordinate['latitude']",
+											"value": "{{$randomLatitude}}",
+											"type": "text"
+										},
+										{
+											"key": "coordinate['longitude']",
+											"value": "{{$randomLongitude}}",
+											"type": "text"
+										},
+										{
+											"key": "location['address1']",
+											"value": "{{$randomStreetAddress}}",
+											"type": "text"
+										},
+										{
+											"key": "location['address2']",
+											"value": "{{$randomStreetAddress}}",
+											"type": "text"
+										},
+										{
+											"key": "location['address3']",
+											"value": "{{$randomStreetAddress}}",
+											"type": "text"
+										},
+										{
+											"key": "location['city']",
+											"value": "{{$randomCity}}",
+											"type": "text"
+										},
+										{
+											"key": "location['state']",
+											"value": "{{$randomStreetName}}",
+											"type": "text"
+										},
+										{
+											"key": "location['zip_code']",
+											"value": "{{$randomZipCode}}",
+											"type": "text"
+										},
+										{
+											"key": "location['country']",
+											"value": "{{$randomCountry}}",
+											"type": "text"
+										},
+										{
+											"key": "attribute['business_temp_closed']",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "attribute['outdoor_seating']",
+											"value": "{{$randomBoolean}}",
+											"type": "text"
+										},
+										{
+											"key": "attribute['liked_by_vegans']",
+											"value": "{{$randomBoolean}}",
+											"type": "text"
+										},
+										{
+											"key": "attribute['liked_by_vegetarians']",
+											"value": "{{$randomBoolean}}",
+											"type": "text"
+										},
+										{
+											"key": "attribute['hot_and_new']",
+											"value": "2000-01-01",
+											"type": "text"
+										},
+										{
+											"key": "category[]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['url']",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['caption']",
+											"value": "{{$randomLoremWord}}",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['width']",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['height']",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['is_user_submitted']",
+											"value": "{{$randomBoolean}}",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['label']",
+											"value": "{{$randomLoremWord}}",
+											"type": "text"
+										},
+										{
+											"key": "photos[0]['image']",
+											"type": "file",
+											"src": [
+												"/C:/Users/alang/Downloads/6596121.png"
+											]
+										},
+										{
+											"key": "open_hours[0]['open_id']",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "open_hours[0]['hours_type']",
+											"value": "REGULAR",
+											"type": "text"
+										},
+										{
+											"key": "open_hours[0]['is_open_now']",
+											"value": "{{$randomBoolean}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/business/update/5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"business",
+										"update",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "set-cookie",
+									"value": "adonis-session=s%3AeyJtZXNzYWdlIjoieW1rMmR3ejFxY2Ixd2JjZzJ4ZnpuYndqIiwicHVycG9zZSI6ImFkb25pcy1zZXNzaW9uIn0.0s7jeQk60IzWja704Wncouyy6qig5TSj43-idjC1yG4; Max-Age=7200; Path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "content-length",
+									"value": "1432"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jan 2024 11:44:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"display_phone\": \"63-283-219-5431\",\n    \"distance\": \"-0.99\",\n    \"image_url\": \"http://localhost:3333/images/qf1l56kpkacolawf9abiw0dr.png\",\n    \"is_claimed\": 1,\n    \"is_closed\": 1,\n    \"date_opened\": \"2024-01-29\",\n    \"date_closed\": \"2024-01-29\",\n    \"name\": \"http://placeimg.com/640/480/nature\",\n    \"phone\": \"7-287-742-9310\",\n    \"price\": \"$\",\n    \"rating\": 5,\n    \"review_count\": 1,\n    \"transactions\": \"restaurant_reservation\",\n    \"created_at\": \"2024-01-29T11:37:05.000+00:00\",\n    \"updated_at\": \"2024-01-29T11:37:05.000+00:00\",\n    \"attribute\": {\n        \"business_id\": 5,\n        \"business_temp_closed\": 100,\n        \"outdoor_seating\": 1,\n        \"liked_by_vegans\": 1,\n        \"liked_by_vegetarians\": 0,\n        \"hot_and_new\": \"2024-01-29\"\n    },\n    \"kordinat\": {\n        \"business_id\": 5,\n        \"latitude\": \"-7.87\",\n        \"longitude\": \"93.36\"\n    },\n    \"lokasi\": {\n        \"business_id\": 5,\n        \"address_1\": \"89049 Wolff Trail\",\n        \"address_2\": \"6632 Gibson Mountain\",\n        \"address_3\": \"27452 Rolfson Rapid\",\n        \"city\": \"Antelope\",\n        \"country\": \"New Zealand\",\n        \"state\": \"Waters Hill\",\n        \"zip_code\": \"1234567890\"\n    },\n    \"photo\": [\n        {\n            \"photo_id\": 9,\n            \"business_id\": 5,\n            \"url\": null,\n            \"caption\": \"totam\",\n            \"width\": 100,\n            \"height\": 100,\n            \"is_user_submitted\": 0,\n            \"user_id\": null,\n            \"label\": \"consequuntur\"\n        }\n    ],\n    \"categories_related\": [\n        {\n            \"id\": 5,\n            \"business_id\": 5,\n            \"categories_id\": 1,\n            \"category\": {\n                \"id\": 1,\n                \"alias\": \"demitto sursum utique\",\n                \"title\": \"tum carmen abscido\",\n                \"created_at\": \"2024-01-27T10:57:44.000+00:00\",\n                \"updated_at\": \"2024-01-27T10:57:44.000+00:00\"\n            }\n        }\n    ],\n    \"open_hour\": [\n        {\n            \"id\": 18,\n            \"business_id\": 5,\n            \"open_id\": 17,\n            \"hours_type\": \"REGULAR\",\n            \"is_open_now\": 1,\n            \"open\": {\n                \"id\": 17,\n                \"is_overnight\": 1,\n                \"start\": 3,\n                \"end\": 3,\n                \"day\": 0\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"id": "7d590afb-a119-499c-b295-3fd95f1324e8"
 		}
 	]
 }
