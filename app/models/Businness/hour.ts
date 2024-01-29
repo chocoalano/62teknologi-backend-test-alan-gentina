@@ -1,6 +1,7 @@
 import { BaseModel, belongsTo, column } from '@adonisjs/lucid/orm'
 import type { BelongsTo } from '@adonisjs/lucid/types/relations'
 import Business from './business.js'
+import Open from './open.js'
 
 export default class Hour extends BaseModel {
   @column({ isPrimary: true })
@@ -17,4 +18,8 @@ export default class Hour extends BaseModel {
     foreignKey: 'business_id'
   })
   declare business: BelongsTo<typeof Business>
+  @belongsTo(() => Open, {
+    foreignKey: 'open_id'
+  })
+  declare open: BelongsTo<typeof Open>
 }

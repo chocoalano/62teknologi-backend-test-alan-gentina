@@ -6,9 +6,9 @@ export default class extends BaseSchema {
   async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.integer('business_id').unsigned().references('businesses.id').onDelete('CASCADE')
-      table.string('address1', 50)
-      table.string('address2', 50)
-      table.string('address3', 50)
+      table.string('address_1', 50)
+      table.string('address_2', 50)
+      table.string('address_3', 50)
       table.string('city', 50)
       table.string('country', 50)
       table.string('state', 50)

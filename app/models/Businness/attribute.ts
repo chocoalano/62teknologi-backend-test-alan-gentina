@@ -14,7 +14,7 @@ export default class Attribute extends BaseModel {
   declare liked_by_vegans: boolean
   @column()
   declare liked_by_vegetarians: boolean
-  @column.dateTime({ autoCreate: false, autoUpdate: false })
+  @column.date()
   declare hot_and_new: DateTime
 
   @belongsTo(() => Business, {

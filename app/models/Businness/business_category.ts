@@ -4,6 +4,8 @@ import Business from './business.js'
 import Category from './category.js'
 
 export default class BusinessCategory extends BaseModel {
+  @column({ isPrimary: true })
+  declare id: number
   @column()
   declare business_id: number
   @column()

@@ -39,12 +39,7 @@ export default class UsersController {
   async show({ params, response }: HttpContext) {
     try {
       const q = await this.repo.find(params.id)
-      return response.ok({
-        full_name: q.fullName,
-        email: q.email,
-        created_at: q.createdAt,
-        updated_at: q.updatedAt,
-      })
+      return response.ok(q)
     } catch (error) {
       return response.status(error.status).send(error)
     }

@@ -8,8 +8,8 @@ export default class extends BaseSchema {
       table.increments('id')
       table.integer('business_id').unsigned().references('businesses.id').onDelete('CASCADE')
       table.integer('open_id').unsigned().references('opens.id').onDelete('CASCADE')
-      table.string('hours_type', 100).notNullable()
-      table.boolean('is_open_now').notNullable()
+      table.string('hours_type', 100).notNullable().defaultTo('REGULAR')
+      table.boolean('is_open_now').notNullable().defaultTo('1')
     })
   }
 

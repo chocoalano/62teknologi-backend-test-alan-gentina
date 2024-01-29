@@ -5,8 +5,10 @@ export default class extends BaseSchema {
 
   async up() {
     this.schema.createTable(this.tableName, (table) => {
+      table.increments('id').primary()
       table.integer('business_id').unsigned().references('businesses.id').onDelete('CASCADE')
       table.integer('categories_id').unsigned().references('categories.id').onDelete('CASCADE')
+      table.unique(['business_id', 'categories_id'])
     })
   }
 

@@ -34,13 +34,7 @@ export default class AuthController {
   async show({ auth, response }: HttpContext) {
     try {
       const u = await this.repo.find(auth.user!.id)
-      return response.ok({
-        id: u.id,
-        full_name: u.fullName,
-        email: u.email,
-        created_at: u.createdAt,
-        updated_at: u.updatedAt
-      })
+      return response.ok(u)
     } catch (error) {
       return response.status(error.status).send(error)
     }

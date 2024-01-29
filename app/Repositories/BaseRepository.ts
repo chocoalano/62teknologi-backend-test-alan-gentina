@@ -8,7 +8,9 @@ export default class BaseRepository {
         const { page, limit, search } = input
         const count = await this.model.query().where(colSearch, 'LIKE', '%' + search + '%').count('* as total')
         let total = limit < 0 ? count[0].$extras.total : limit
-        const q = await this.model.query().paginate(page, total)
+        const q = await this.model.query()
+        .where(colSearch, 'LIKE', '%' + search + '%')
+        .paginate(page, total)
         return q
     }
 

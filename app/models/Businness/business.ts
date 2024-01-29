@@ -22,9 +22,9 @@ export default class Business extends BaseModel {
   declare is_claimed: boolean
   @column()
   declare is_closed: boolean
-  @column.dateTime({ autoCreate: false, autoUpdate: false })
+  @column.date()
   declare date_opened: DateTime
-  @column.dateTime({ autoCreate: false, autoUpdate: false })
+  @column.date()
   declare date_closed: DateTime
   @column()
   declare name: string
@@ -70,12 +70,37 @@ export default class Business extends BaseModel {
   })
   declare photo: HasMany<typeof Photo>
 
+  // forlist
+  @hasMany(() => BusinessCategory, {
+    localKey: 'id',
+    foreignKey: 'business_id',
+    onQuery(query) {
+      if (!query.isRelatedSubQuery) {
+        query
+          .preload('category')
+      }
+    }
+  })
+  declare categories_related: HasMany<typeof BusinessCategory>
+  @hasMany(() => Hour, {
+    localKey: 'id',
+    foreignKey: 'business_id',
+    onQuery(query) {
+      if (!query.isRelatedSubQuery) {
+        query
+          .preload('open')
+      }
+    }
+  })
+  declare open_hour: HasMany<typeof Hour>
+
   // relationship many to many
   @manyToMany(() => BusinessCategory, {
     localKey: 'id',
     pivotForeignKey: 'business_id',
     relatedKey: 'id',
     pivotRelatedForeignKey: 'categories_id',
+    pivotTable: 'business_categories',
   })
   declare categories: ManyToMany<typeof BusinessCategory>
 
@@ -84,6 +109,7 @@ export default class Business extends BaseModel {
     pivotForeignKey: 'business_id',
     relatedKey: 'id',
     pivotRelatedForeignKey: 'open_id',
+    pivotTable: 'hours',
   })
   declare hours: ManyToMany<typeof Hour>
 }
