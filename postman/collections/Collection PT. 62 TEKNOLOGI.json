@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "867ae4ef-70ac-4178-a271-fc0612d315d3",
+		"name": "Collection PT. 62 TEKNOLOGI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "8135484-867ae4ef-70ac-4178-a271-fc0612d315d3"
+	},
+	"item": [
+		{
+			"name": "AUTHENTICATION",
+			"item": [
+				{
+					"name": "Login",
+					"id": "cd7499a0-530f-4a43-8588-826a3107f99e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/auth/login?email=Princess_Wisozk@gmail.com&password=123456",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "Princess_Wisozk@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "b200dbb3-03ff-4b0f-beb0-19e8704f7eb0",
+							"name": "422",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/auth/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "set-cookie",
+									"value": "adonis-session=s%3AeyJtZXNzYWdlIjoieW1rMmR3ejFxY2Ixd2JjZzJ4ZnpuYndqIiwicHVycG9zZSI6ImFkb25pcy1zZXNzaW9uIn0.0s7jeQk60IzWja704Wncouyy6qig5TSj43-idjC1yG4; Max-Age=7200; Path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "content-length",
+									"value": "221"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jan 2024 11:56:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 422,\n    \"code\": \"E_VALIDATION_ERROR\",\n    \"messages\": [\n        {\n            \"message\": \"The email field must be defined\",\n            \"rule\": \"required\",\n            \"field\": \"email\"\n        },\n        {\n            \"message\": \"The password field must be defined\",\n            \"rule\": \"required\",\n            \"field\": \"password\"\n        }\n    ]\n}"
+						},
+						{
+							"id": "f94a49ba-80b7-4190-90f4-bb313ea2d92b",
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/auth/login?email=Princess_Wisozk@gmail.com&password=123456",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "Princess_Wisozk@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "set-cookie",
+									"value": "adonis-session=s%3AeyJtZXNzYWdlIjoieW1rMmR3ejFxY2Ixd2JjZzJ4ZnpuYndqIiwicHVycG9zZSI6ImFkb25pcy1zZXNzaW9uIn0.0s7jeQk60IzWja704Wncouyy6qig5TSj43-idjC1yG4; Max-Age=7200; Path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "content-length",
+									"value": "188"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jan 2024 11:58:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"bearer\",\n    \"name\": null,\n    \"token\": \"oat_NDkz.d2dnNjVqa3ViVmNvT3h4eWJwamRkdjVkSFNpeE5QWmFrZXZIR2dFQzYxMTM4OTM2\",\n    \"abilities\": [\n        \"*\"\n    ],\n    \"lastUsedAt\": null,\n    \"expiresAt\": \"2024-02-28T11:58:21.642Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"id": "1fa4eb5c-6d58-49c5-8d16-e761379bf209",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/auth/register?fullName={{$randomUserName}}&email={{$randomEmail}}&password=123456&password_confirmation=123456",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "fullName",
+									"value": "{{$randomUserName}}"
+								},
+								{
+									"key": "email",
+									"value": "{{$randomEmail}}"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "6cfce807-8c8e-4f8b-8f03-685aaac5de41",
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/auth/register?fullName={{$randomUserName}}&email={{$randomEmail}}&password=123456&password_confirmation=123456",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									],
+									"query": [
+										{
+											"key": "fullName",
+											"value": "{{$randomUserName}}"
+										},
+										{
+											"key": "email",
+											"value": "{{$randomEmail}}"
+										},
+										{
+											"key": "password",
+											"value": "123456"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "set-cookie",
+									"value": "adonis-session=s%3AeyJtZXNzYWdlIjoieW1rMmR3ejFxY2Ixd2JjZzJ4ZnpuYndqIiwicHVycG9zZSI6ImFkb25pcy1zZXNzaW9uIn0.0s7jeQk60IzWja704Wncouyy6qig5TSj43-idjC1yG4; Max-Age=7200; Path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "content-length",
+									"value": "158"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jan 2024 12:00:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"full_name\": \"Malachi_Carroll\",\n    \"email\": \"Victor76@yahoo.com\",\n    \"created_at\": \"2024-01-29T12:00:20.237+00:00\",\n    \"updated_at\": \"2024-01-29T12:00:20.237+00:00\",\n    \"id\": 25\n}"
+						}
+					]
+				}
+			],
+			"id": "ea421270-96d9-4668-a820-e130794659ce"
+		}
+	]
+}
