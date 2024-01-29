@@ -57,6 +57,8 @@ export default class BusinessesController {
             const q = await this.repo.updateBusiness(request.param('id'), payload, photos, img_file)
             return response.ok(q)
         } catch (error) {
+            console.log(error);
+            
             return response.status(error.status).send(error)
         }
     }

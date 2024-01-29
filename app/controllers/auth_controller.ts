@@ -16,7 +16,10 @@ export default class AuthController {
       if (params.option === 'login') {
         const payload = await loginValidator.validate(input)
         const login = await this.repo.login(payload)
-        return response.ok(login)
+        if (login) {
+          return response.ok(login)
+        }
+        return response.status(401).send('Unauthorized')
       }
       if (params.option === 'register') {
         const payload = await registerValidator.validate(input)
